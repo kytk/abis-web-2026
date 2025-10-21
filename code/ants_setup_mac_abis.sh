@@ -16,7 +16,7 @@ else
   output_file=${fname_amd64}
 fi
 
-curl -L curl -L "https://drive.usercontent.google.com/download?id=${file_id}&confirm=xxx" -o "$output_file"
+curl -L "https://drive.usercontent.google.com/download?id=${file_id}&confirm=xxx" -o "$output_file"
   unzip ${output_file} -d ~/
 
 case "$SHELL" in
