@@ -1,18 +1,18 @@
 #!/bin/bash
 
 ## Google Drive file IDs
-ants_arm64_gdid="1pZIZ4ICPo4kzoCTfoKanEXB4jvfv0LVZ"
-ants_amd64_gdid="17pDj7ygzgRq_XoWgtO1vdnu9VxO5Cy1T"
+fid_arm64="1pZIZ4ICPo4kzoCTfoKanEXB4jvfv0LVZ"
+fid_amd64="17pDj7ygzgRq_XoWgtO1vdnu9VxO5Cy1T"
 fname_arm64="ANTS_arm64.zip"
 fname_amd64="ANTS_amd64.zip"
 
 cd ~/Downloads
 arch=$(uname -m)
 if [ $arch = 'arm64' ]; then
-  file_id=${ants_arm64_gdid} 
+  file_id=${fid_arm64} 
   output_file=${fname_arm64}
 else
-  file_id=${ants_amd64_gdid} 
+  file_id=${fid_amd64} 
   output_file=${fname_amd64}
 fi
 

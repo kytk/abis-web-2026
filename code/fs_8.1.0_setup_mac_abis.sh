@@ -28,13 +28,13 @@ echo "(license.txt should be placed in \$HOME/Downloads)"
 fsver=8.1.0
 
 ## Google Drive file IDs
-fs8_arm64_gdid="1efZ5axKNgCsgGibphGE-uYHgvfXkpca7"
-fs8_amd64_gdid="1eV0GG_in3orQ6vqX_wekNFQ7P_HK7MIo"
+fid_arm64="1efZ5axKNgCsgGibphGE-uYHgvfXkpca7"
+fid_amd64="1eV0GG_in3orQ6vqX_wekNFQ7P_HK7MIo"
 
 ## Package names and MD5 hashes
-archive_arm64="freesurfer-macOS-darwin_arm64-${fsver}.pkg"
+fname_arm64="freesurfer-macOS-darwin_arm64-${fsver}.pkg"
 md5hash_arm64="8bbf749af50e4bdb8d25f6a40ca63af3"
-archive_amd64="freesurfer-macOS-darwin_x86_64-${fsver}.pkg"
+fname_amd64="freesurfer-macOS-darwin_x86_64-${fsver}.pkg"
 md5hash_amd64="0f524bb59195c1053a9a56d2713a34cf"
 
 ## Decide CPU
@@ -42,14 +42,14 @@ arch=$(uname -m)
 
 case "$arch" in
   "arm64")
-    archive="${archive_arm64}"
+    archive="${fname_arm64}"
     md5hash="${md5hash_arm64}"
-    gdid="${fs8_arm64_gdid}"
+    gdid="${fid_arm64}"
     ;;
   "x86_64")
     archive="${archive_amd64}"
     md5hash="${md5hash_amd64}"
-    gdid="${fs8_amd64_gdid}"
+    gdid="${fid_amd64}"
     ;;
   *)
     echo "エラー: サポートされていないアーキテクチャです（Error: Unsupported architecture）: $arch" >&2
