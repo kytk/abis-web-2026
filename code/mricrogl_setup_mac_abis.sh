@@ -5,7 +5,7 @@ curl -OL https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/M
 
 DMG_PATH="~/Downloads/MRIcroGL_macOS.dmg"
 hdiutil attach "$DMG_PATH"
-VOLUME=/Volumes/MRIcroGL/
+VOLUME=/Volumes/MRIcroGL
 echo "MRIcroGLをインストールします"
 APP=$(find "$VOLUME" -name "*.app" -maxdepth 1)
 cp -R "$APP" /Applications/
