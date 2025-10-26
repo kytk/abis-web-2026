@@ -29,7 +29,7 @@ esac
 if ! grep -q '# MRIcroGL' "$CONFIG_FILE"; then
     echo '' >> "$CONFIG_FILE"
     echo '# MRIcroGL' >> "$CONFIG_FILE"
-    echo 'PATH=$PATH:/Applications/MRIcroGL.app/Contents/Resources' >> "$CONFIG_FILE"
+    echo 'PATH=$PATH:/Applications/MRIcroGL.app/Contents/MacOS' >> "$CONFIG_FILE"
     echo "$CONFIG_FILE に MRIcroGL の設定を追加しました"
 fi
 
