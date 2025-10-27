@@ -2,7 +2,7 @@
 
 cd ~/Downloads
 echo "AlizaMSをダウンロードします"
-curl -O https://www.nemotos.net/l4n-abis/macOS_2025/AlizaMS-1.8.3.dmg
+curl -O -C -  https://www.nemotos.net/l4n-abis/macOS_2025/AlizaMS-1.8.3.dmg
 
 sleep 3
 

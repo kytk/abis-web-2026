@@ -1,10 +1,12 @@
 #!/bin/bash
 
 cd ~/Downloads
-curl -OL https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
+curl -OL -C - https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
 
-hdiutil attach MRIcroGL_macOS.dmg
+sleep 3
+
 echo "MRIcroGLをインストールします"
+hdiutil attach MRIcroGL_macOS.dmg
 cp -R /Volumes/MRIcroGL/MRIcroGL.app /Applications/
 
 echo "dmgファイルをアンマウントします"
