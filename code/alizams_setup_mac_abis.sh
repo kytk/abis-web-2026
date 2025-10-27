@@ -1,17 +1,17 @@
 #!/bin/bash
 
 cd ~/Downloads
+echo "AlizaMSをダウンロードします"
 curl -O https://www.nemotos.net/l4n-abis/macOS_2025/AlizaMS-1.8.3.dmg
 
-DMG_PATH="~/Downloads/AlizaMS-1.8.3.dmg"
-hdiutil attach $DMG_PATH
-VOLUME=/Volumes/AlizaMS-1.8.3/
+sleep 3
+
 echo "AlizaMSをインストールします"
-APP=$(find "$VOLUME" -name "*.app" -maxdepth 1)
-cp -R "$APP" /Applications/
+hdiutil attach AlizaMS-1.8.3.dmg
+cp -R /Volumes/AlizaMS-1.8.3/AlizaMS.app /Applications/
 
 echo "dmgファイルをアンマウントします"
-hdiutil detach "$VOLUME"
+hdiutil detach /Volumes/AlizaMS-1.8.3
 
 echo "AlizaMSのインストールが完了しました。"
 
