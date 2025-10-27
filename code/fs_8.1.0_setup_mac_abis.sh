@@ -47,7 +47,7 @@ case "$arch" in
     gdid="${fid_arm64}"
     ;;
   "x86_64")
-    archive="${archive_amd64}"
+    archive="${fname_amd64}"
     md5hash="${md5hash_amd64}"
     gdid="${fid_amd64}"
     ;;
